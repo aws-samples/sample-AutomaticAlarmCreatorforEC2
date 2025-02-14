@@ -1,0 +1,113 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": [
+				"cloudformation:CreateStack",
+				"cloudformation:DeleteStack",
+				"cloudformation:DescribeStacks",
+				"cloudformation:UpdateStack",
+				"cloudformation:ListStacks",
+				"cloudformation:ValidateTemplate",
+				"cloudformation:GetTemplateSummary",
+				"cloudformation:DescribeStackEvents",
+				"cloudformation:DescribeStackResource",
+				"cloudformation:DescribeStackResources",
+				"cloudformation:GetTemplate"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"iam:CreateRole",
+				"iam:DeleteRole",
+				"iam:GetRole",
+				"iam:PutRolePolicy",
+				"iam:DeleteRolePolicy",
+				"iam:CreateInstanceProfile",
+				"iam:DeleteInstanceProfile",
+				"iam:AddRoleToInstanceProfile",
+				"iam:RemoveRoleFromInstanceProfile",
+				"iam:GetRolePolicy",
+				"iam:GetInstanceProfile"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"lambda:CreateFunction",
+				"lambda:DeleteFunction",
+				"lambda:GetFunction",
+				"lambda:UpdateFunctionCode",
+				"lambda:UpdateFunctionConfiguration",
+				"lambda:AddPermission",
+				"lambda:RemovePermission",
+				"lambda:GetFunctionConfiguration"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"sns:CreateTopic",
+				"sns:DeleteTopic",
+				"sns:GetTopicAttributes",
+				"sns:SetTopicAttributes",
+				"sns:Subscribe",
+				"sns:Unsubscribe"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"events:PutRule",
+				"events:DeleteRule",
+				"events:DescribeRule",
+				"events:PutTargets",
+				"events:RemoveTargets"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"cloudwatch:PutMetricAlarm",
+				"cloudwatch:DeleteAlarms",
+				"cloudwatch:DescribeAlarms"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"ssm:GetParameter",
+				"ssm:PutParameter",
+				"ssm:DeleteParameter"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"logs:CreateLogGroup",
+				"logs:DeleteLogGroup",
+				"logs:PutRetentionPolicy",
+				"logs:DescribeLogGroups"
+			],
+			"Resource": "*"
+		},
+		{
+			"Effect": "Allow",
+			"Action": [
+				"sts:AssumeRole"
+			],
+			"Resource": [
+				"arn:aws:iam::*:role/cdk-*"
+			]
+		}
+	]
+}
